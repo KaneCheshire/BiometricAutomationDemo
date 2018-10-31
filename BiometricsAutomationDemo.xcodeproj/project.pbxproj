@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3C7657E218A65470016F5D8 /* Biometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C7657D218A65470016F5D8 /* Biometrics.m */; };
 		C3D12E27218A5E1900F5F611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D12E26218A5E1900F5F611 /* AppDelegate.swift */; };
 		C3D12E29218A5E1900F5F611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D12E28218A5E1900F5F611 /* ViewController.swift */; };
 		C3D12E2C218A5E1900F5F611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D12E2A218A5E1900F5F611 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3C7657B218A65460016F5D8 /* BiometricsAutomationDemoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiometricsAutomationDemoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3C7657C218A65470016F5D8 /* Biometrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Biometrics.h; sourceTree = "<group>"; };
+		C3C7657D218A65470016F5D8 /* Biometrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Biometrics.m; sourceTree = "<group>"; };
 		C3D12E23218A5E1900F5F611 /* BiometricsAutomationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiometricsAutomationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D12E26218A5E1900F5F611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D12E28218A5E1900F5F611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3C7657F218A678C0016F5D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3D12E3D218A5E1B00F5F611 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C3D12E1A218A5E1900F5F611 = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +92,7 @@
 				C3D12E26218A5E1900F5F611 /* AppDelegate.swift */,
 				C3D12E28218A5E1900F5F611 /* ViewController.swift */,
 				C3D12E2A218A5E1900F5F611 /* Main.storyboard */,
-				C3D12E2D218A5E1B00F5F611 /* Assets.xcassets */,
-				C3D12E2F218A5E1B00F5F611 /* LaunchScreen.storyboard */,
-				C3D12E32218A5E1B00F5F611 /* Info.plist */,
+				C3D12E46218A5E4300F5F611 /* Supporting Files */,
 			);
 			path = BiometricsAutomationDemo;
 			sourceTree = "<group>";
@@ -91,9 +101,22 @@
 			isa = PBXGroup;
 			children = (
 				C3D12E3B218A5E1B00F5F611 /* BiometricsAutomationDemoUITests.swift */,
-				C3D12E3D218A5E1B00F5F611 /* Info.plist */,
+				C3C7657C218A65470016F5D8 /* Biometrics.h */,
+				C3C7657D218A65470016F5D8 /* Biometrics.m */,
+				C3C7657B218A65460016F5D8 /* BiometricsAutomationDemoUITests-Bridging-Header.h */,
+				C3C7657F218A678C0016F5D8 /* Supporting Files */,
 			);
 			path = BiometricsAutomationDemoUITests;
+			sourceTree = "<group>";
+		};
+		C3D12E46218A5E4300F5F611 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3D12E2D218A5E1B00F5F611 /* Assets.xcassets */,
+				C3D12E2F218A5E1B00F5F611 /* LaunchScreen.storyboard */,
+				C3D12E32218A5E1B00F5F611 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +172,7 @@
 					};
 					C3D12E36218A5E1B00F5F611 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 						TestTargetID = C3D12E22218A5E1900F5F611;
 					};
 				};
@@ -206,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C7657E218A65470016F5D8 /* Biometrics.m in Sources */,
 				C3D12E3C218A5E1B00F5F611 /* BiometricsAutomationDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BCL7VAFF4;
-				INFOPLIST_FILE = BiometricsAutomationDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BiometricsAutomationDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BCL7VAFF4;
-				INFOPLIST_FILE = BiometricsAutomationDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BiometricsAutomationDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,9 +421,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BCL7VAFF4;
-				INFOPLIST_FILE = BiometricsAutomationDemoUITests/Info.plist;
+				INFOPLIST_FILE = "BiometricsAutomationDemoUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +432,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.codes.BiometricsAutomationDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiometricsAutomationDemoUITests/BiometricsAutomationDemoUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BiometricsAutomationDemo;
@@ -416,9 +444,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BCL7VAFF4;
-				INFOPLIST_FILE = BiometricsAutomationDemoUITests/Info.plist;
+				INFOPLIST_FILE = "BiometricsAutomationDemoUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,6 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.codes.BiometricsAutomationDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiometricsAutomationDemoUITests/BiometricsAutomationDemoUITests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BiometricsAutomationDemo;
