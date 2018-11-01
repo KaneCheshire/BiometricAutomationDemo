@@ -7,7 +7,7 @@ UI testing anything related to biometrics is really tough on iOS because there's
 
 Until now.
 
-This project serves as a demo project for a (blog post)[https://edit.theappbusiness.com/so-you-want-to-automate-ios-biometrics-81bd015f5d38] I wrote about how we approached finding a solution, and eventually ended up with what you can find in this repo.
+This project serves as a demo project for a [blog post](https://edit.theappbusiness.com/so-you-want-to-automate-ios-biometrics-81bd015f5d38) I wrote about how we approached finding a solution, and eventually ended up with what you can find in this repo.
 
 ## The demo
 
