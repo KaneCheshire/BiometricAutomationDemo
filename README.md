@@ -17,4 +17,18 @@ Once you open the project you'll find two UI tests, one for launching the app wi
 
 As a bonus, one thing I didn't cover in the post is how to simulate a successful biometric authentication, so I've added an example in the demo.
 
+## Face ID vs Touch ID
+
+Although Face ID and Touch ID APIs are largely the same, there are some things to consider when automating them. 
+
+For example, you don't need to ask the user's permission to use Touch ID but the first time you try to authenticate the user with Face ID a permissions prompt will appear. 
+
+The demo project handles this by checking for the existence of the permissions prompt before trying to approve it, since it will only show once for Face ID and never for Touch ID. 
+
+Another thing to be aware of us the differences in the UI between Touch ID and Face ID. Touch ID always has a visible cancel button, whereas Face ID doesn't.
+
+## Further reading
+
+If you want to read how we structure our automation tests to be significantly easier to read and maintain, check out [this series of posts](https://edit.theappbusiness.com/swifty-gherkins-part-1-28abba7dfd8).
+
 Enjoy!

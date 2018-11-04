@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C314007A218F9DA500EA8DB1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C3C7657B218A65460016F5D8 /* BiometricsAutomationDemoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiometricsAutomationDemoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3C7657C218A65470016F5D8 /* Biometrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Biometrics.h; sourceTree = "<group>"; };
 		C3C7657D218A65470016F5D8 /* Biometrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Biometrics.m; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		C3D12E1A218A5E1900F5F611 = {
 			isa = PBXGroup;
 			children = (
+				C314007A218F9DA500EA8DB1 /* README.md */,
 				C3D12E25218A5E1900F5F611 /* BiometricsAutomationDemo */,
 				C3D12E3A218A5E1B00F5F611 /* BiometricsAutomationDemoUITests */,
 				C3D12E24218A5E1900F5F611 /* Products */,
