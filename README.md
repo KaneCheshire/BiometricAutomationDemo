@@ -1,9 +1,9 @@
 # BiometricAutomationDemo
-Dependency free iOS biometric automation example.
+Dependency-free iOS Face ID and Touch ID automation example.
 
 ## Zoom out
 
-UI testing anything related to biometrics is really tough on iOS because there's no official way to simulate/turn on biometrics on the Simulator.
+UI testing anything related to biometrics is really tough on iOS because there's no way to simulate/turn on biometrics on the Simulator from within UI tests, wihtout some sort of external dependency.
 
 Until now.
 
@@ -13,9 +13,13 @@ This project serves as a demo project for a [blog post](https://edit.theappbusin
 
 If you download or clone the repo, all you'll find is an Xcode project with a simple app and some UI tests. 
 
-Once you open the project you'll find two UI tests, one for launching the app with biometrics disabled, and one for launching the app with biometrics enabled. The UI in the app adapts based on what the state of biometrics are at launch, so you can easily see the UI tests in action.
+Once you open the project you'll find four UI tests: 
+- One for launching the app with biometrics disabled. 
+- One for launching the app with biometrics enabled. 
+- One for successfully authenticating with biometrics.
+- One for failing to authenticate with biometrics.
 
-As a bonus, one thing I didn't cover in the post is how to simulate a successful biometric authentication, so I've added an example in the demo.
+The UI in the app adapts based on what the state of biometrics are at launch, so you can easily see the UI tests in action.
 
 ## Face ID vs Touch ID
 
