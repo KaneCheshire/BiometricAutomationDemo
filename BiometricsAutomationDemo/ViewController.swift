@@ -18,7 +18,12 @@ class ViewController: UIViewController {
         let context = LAContext()
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
                                localizedReason: "Authenticate now!",
-                               reply: { _, _ in })
+                               reply: { success, _ in
+                                let title = success ? "Authenticated successfully!" : "Authentication failed."
+                                let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+                                self.present(controller, animated: true)
+                                
+        })
     }
     
     override func viewDidLoad() {

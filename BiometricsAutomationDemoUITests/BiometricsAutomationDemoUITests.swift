@@ -25,13 +25,35 @@ class BiometricsAutomationDemoUITests: XCTestCase {
         app.launch()
         XCTAssertTrue(app.staticTexts["Biometrics available"].firstMatch.exists)
         XCTAssertTrue(app.buttons["Authenticate"].firstMatch.isEnabled)
-        XCTAssertEqual(app.state, .runningForeground)
+    }
+    
+    func test_successfulAuthentication() {
+        Biometrics.enrolled()
+        app.launch()
         app.buttons["Authenticate"].tap()
+        acceptPermissionsPromptIfRequired()
+        Biometrics.successfulAuthentication()
+        XCTAssertTrue(app.alerts["Authenticated successfully!"].firstMatch.waitForExistence(timeout: 5))
+    }
+    
+    func test_unsuccessfulAuthentication() {
+        Biometrics.enrolled()
+        app.launch()
+        app.buttons["Authenticate"].tap()
+        acceptPermissionsPromptIfRequired()
+        Biometrics.unsuccessfulAuthentication()
+        let cancelButton = springboard.alerts.buttons["Cancel"].firstMatch
+        XCTAssertTrue(cancelButton.waitForExistence(timeout: 5))
+        cancelButton.tap()
+        XCTAssertTrue(app.alerts["Authentication failed."].firstMatch.waitForExistence(timeout: 5))
+    }
+    
+    // Face ID asks the user for permission the first time you try to authenticate. Touch ID doesn't.
+    private func acceptPermissionsPromptIfRequired() {
         let permissionsOkayButton = springboard.alerts.buttons["OK"].firstMatch
-        if permissionsOkayButton.exists { // Face ID asks the user for permission the first time you try to authenticate. Touch ID doesn't
+        if permissionsOkayButton.exists {
             permissionsOkayButton.tap()
         }
-        Biometrics.successfulAuthentication()
     }
 
 }
