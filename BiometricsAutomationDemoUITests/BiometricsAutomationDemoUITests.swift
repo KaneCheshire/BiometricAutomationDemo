@@ -10,9 +10,11 @@ import XCTest
 
 class BiometricsAutomationDemoUITests: XCTestCase {
     
+    let app = XCUIApplication()
+    let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard") // Shows permissions alerts over our app
+    
     func test_launchingWithBiometricsDisabled() {
         Biometrics.unenrolled()
-        let app = XCUIApplication()
         app.launch()
         XCTAssertTrue(app.staticTexts["Biometrics unavailable"].exists)
         XCTAssertFalse(app.buttons["Authenticate"].isEnabled)
@@ -20,11 +22,15 @@ class BiometricsAutomationDemoUITests: XCTestCase {
     
     func test_launchingWithBiometricsEnabled() {
         Biometrics.enrolled()
-        let app = XCUIApplication()
         app.launch()
-        XCTAssertTrue(app.staticTexts["Biometrics available"].exists)
-        XCTAssertTrue(app.buttons["Authenticate"].isEnabled)
+        XCTAssertTrue(app.staticTexts["Biometrics available"].firstMatch.exists)
+        XCTAssertTrue(app.buttons["Authenticate"].firstMatch.isEnabled)
+        XCTAssertEqual(app.state, .runningForeground)
         app.buttons["Authenticate"].tap()
+        let permissionsOkayButton = springboard.alerts.buttons["OK"].firstMatch
+        if permissionsOkayButton.exists { // Face ID asks the user for permission the first time you try to authenticate. Touch ID doesn't
+            permissionsOkayButton.tap()
+        }
         Biometrics.successfulAuthentication()
     }
 
